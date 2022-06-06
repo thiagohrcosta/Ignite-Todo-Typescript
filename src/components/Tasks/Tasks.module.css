@@ -1,0 +1,41 @@
+.tasksContainer {
+  max-width: 736px;
+  margin: -30px auto 0;
+}
+
+.tasksHeader {
+  display: flex;
+  justify-content: space-around;
+}
+
+.taskInput {
+  background: var(--gray-500);
+  color: var(--gray-100);
+
+  width: 628px;
+  height: 54px;
+  padding: 16px;
+
+  border-radius: 8px;
+  border: none;
+}
+
+.btnAddTask {
+  background: var(--blue-800);
+  color: var(--gray-100);
+
+  width: 90px;
+  height: 52px;
+  padding: 16px;
+  gap: 8px;
+  border-radius: 8px;
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
