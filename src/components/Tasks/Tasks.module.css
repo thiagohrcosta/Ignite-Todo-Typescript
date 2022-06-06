@@ -1,0 +1,99 @@
+.tasksContainer {
+  max-width: 736px;
+  margin: -30px auto 0;
+}
+
+.tasksHeader {
+  display: flex;
+  justify-content: space-around;
+}
+
+.taskInput {
+  background: var(--gray-500);
+  color: var(--gray-100);
+
+  width: 638px;
+  height: 54px;
+  padding: 16px;
+
+  border-radius: 8px;
+  border: none;
+}
+
+.btnAddTask {
+  background: var(--blue-800);
+  color: var(--gray-100);
+
+  width: 90px;
+  height: 52px;
+  padding: 16px;
+  gap: 8px;
+  border-radius: 8px;
+  border: none;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.tasksInformation {
+  margin-top: 64px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksInformation p:first-child {
+  color: var(--blue-500);
+}
+
+.tasksInformation span {
+  background: var(--gray-500);
+  color: var(--gray-100);
+
+  width: 25px;
+  height: 19px;
+
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  gap: 10px;
+
+  border-radius: 999px;
+
+}
+
+.tasksInformation p:last-child {
+  color: var(--purple-500);
+}
+
+.tasksList {
+  margin-top: 24px;
+  width: 736px;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.taskIcon {
+  margin: 64px 0 16px;
+  color: var(--gray-300);
+}
+
+.tasksList p {
+  color: var(--gray-300);
+  font-weight: 700;
+}
+
+.tasksList span {
+  color: var(--gray-300);
+  font-weight: 400;
+}
