@@ -64,9 +64,36 @@
 
   border-radius: 999px;
 
-
 }
 
 .tasksInformation p:last-child {
   color: var(--purple-500);
+}
+
+.tasksList {
+  margin-top: 24px;
+  width: 736px;
+  border-top: 1px solid var(--gray-400);
+  border-radius: 8px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.taskIcon {
+  margin: 64px 0 16px;
+  color: var(--gray-300);
+}
+
+.tasksList p {
+  color: var(--gray-300);
+  font-weight: 700;
+}
+
+.tasksList span {
+  color: var(--gray-300);
+  font-weight: 400;
 }
