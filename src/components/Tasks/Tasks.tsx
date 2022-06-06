@@ -14,6 +14,15 @@ export function Tasks(){
           <PlusCircle size={16} />
         </button>
       </div>
+
+      <div className={styles.tasksInformation}>
+        <p>Tarefas criadas: <span>0</span></p>
+        <p>Tarefas concluídas: <span>0</span></p>
+      </div>
+
+      <div className={styles.tasksList}>
+
+      </div>
     </div>
   )
 }

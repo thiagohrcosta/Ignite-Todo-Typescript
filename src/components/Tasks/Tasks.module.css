@@ -12,7 +12,7 @@
   background: var(--gray-500);
   color: var(--gray-100);
 
-  width: 628px;
+  width: 638px;
   height: 54px;
   padding: 16px;
 
@@ -39,3 +39,34 @@
   cursor: pointer;
 }
 
+.tasksInformation {
+  margin-top: 64px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksInformation p:first-child {
+  color: var(--blue-500);
+}
+
+.tasksInformation span {
+  background: var(--gray-500);
+  color: var(--gray-100);
+
+  width: 25px;
+  height: 19px;
+
+  justify-content: center;
+  align-items: center;
+  padding: 2px 8px;
+  gap: 10px;
+
+  border-radius: 999px;
+
+
+}
+
+.tasksInformation p:last-child {
+  color: var(--purple-500);
+}
