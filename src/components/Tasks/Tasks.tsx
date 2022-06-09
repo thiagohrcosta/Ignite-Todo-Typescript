@@ -1,4 +1,4 @@
-import { PlusCircle, ClipboardText } from "phosphor-react";
+import { PlusCircle, ClipboardText, Trash } from "phosphor-react";
 import React, { ChangeEvent, useState } from "react";
 import styles from "./Tasks.module.css";
 
@@ -22,15 +22,25 @@ export function Tasks(){
     setNewTask("");
   }
 
+  function handleDeleteTask(index: number) {
+    const newTasks = [...toDoTasks];
+    newTasks.splice(index, 1);
+    setToDoTasks(newTasks);
+  }
+
   function displayTasks() {
     return toDoTasks.map((task, index) => (
       <div key={index} className={styles.task}>
-        <input type="checkbox" checked={task.isDone} />
+        <input type="checkbox" checked={task.isDone}/>
         <span>{task.content}</span>
+        <Trash
+          size={16}
+          className={styles.taskTrashIcon}
+          onClick={() => handleDeleteTask(index)}
+        />
       </div>
     ));
   }
-
 
   return (
     <div className={styles.tasksContainer}>
@@ -47,7 +57,7 @@ export function Tasks(){
       </div>
 
       <div className={styles.tasksInformation}>
-        <p>Tarefas criadas: <span>0</span></p>
+        <p>Tarefas criadas: <span>{toDoTasks.length}</span></p>
         <p>Tarefas concluídas: <span>0</span></p>
       </div>
 
@@ -60,9 +70,7 @@ export function Tasks(){
               <span>Crie tarefas e organize seus itens a fazer</span>
             </div>
           ) : (
-
               displayTasks()
-
           )
         }
       </div>
