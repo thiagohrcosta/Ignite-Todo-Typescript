@@ -102,4 +102,33 @@
   background: var(--gray-500);
   width: 100%;
   height: 72px;
+
+  padding: 20px;
+  border-radius: 8px;
+  margin: 0 0 8px 0;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.task input {
+  outline: 2px solid red;
+  background: var(--gray-500);
+	border: 1px solid var(--gray-700);
+
+
+	color: var(--gray-100);
+}
+
+.taskTrashIcon {
+  color: var(--gray-300);
+}
+
+.taskTrashIcon:hover {
+  color: var(--red-500);
+}
+
+.taskInput {
+  background: var(--gray-500);
+  border: 2px solid var(--blue-500);
 }
