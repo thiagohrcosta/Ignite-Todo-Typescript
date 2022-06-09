@@ -46,6 +46,7 @@ export function Tasks(){
     <div className={styles.tasksContainer}>
       <div className={styles.tasksHeader}>
         <input
+          value={newTask}
           onChange={(e) => handleNewTaskContent(e)}
           className={styles.taskInput}
           placeholder="Adicione uma nova tarefa"
