@@ -9,8 +9,7 @@ interface Task {
 
 export function Tasks(){
   const [toDoTasks, setToDoTasks] = useState<Task[]>([]);
-  const [doneTasks, setDoneTasks] = useState<Task[]>([]);
-
+  const [tasksCompleted, setTasksCompleted] = useState<Task[]>([]);
   const [newTask, setNewTask] = useState("");
 
   function handleNewTaskContent(event: ChangeEvent<HTMLInputElement>) {
@@ -50,7 +49,7 @@ export function Tasks(){
             )
           }
         </div>
-        <span>{task.content}</span>
+        <span className={task.isDone ? styles.taskContentCompleted : ""}>{task.content}</span>
         <Trash
           size={16}
           className={styles.taskTrashIcon}
@@ -77,7 +76,7 @@ export function Tasks(){
 
       <div className={styles.tasksInformation}>
         <p>Tarefas criadas: <span>{toDoTasks.length}</span></p>
-        <p>Tarefas concluídas: <span>0</span></p>
+        <p>Tarefas concluídas: <span>{toDoTasks.map((task) => task.isDone).filter((task) => task).length} de {toDoTasks.length}</span></p>
       </div>
 
       <div className={styles.tasksList}>

@@ -20,6 +20,10 @@
   border: none;
 }
 
+.taskContentCompleted {
+  text-decoration: line-through;
+}
+
 .btnAddTask {
   background: var(--blue-800);
   color: var(--gray-100);
