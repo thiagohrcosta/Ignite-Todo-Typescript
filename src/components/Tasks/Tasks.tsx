@@ -1,4 +1,4 @@
-import { PlusCircle, ClipboardText, Trash } from "phosphor-react";
+import { PlusCircle, ClipboardText, Trash, Check } from "phosphor-react";
 import React, { ChangeEvent, useState } from "react";
 import styles from "./Tasks.module.css";
 
@@ -9,6 +9,7 @@ interface Task {
 
 export function Tasks(){
   const [toDoTasks, setToDoTasks] = useState<Task[]>([]);
+  const [doneTasks, setDoneTasks] = useState<Task[]>([]);
 
   const [newTask, setNewTask] = useState("");
 
@@ -28,10 +29,27 @@ export function Tasks(){
     setToDoTasks(newTasks);
   }
 
+  function handleCompletedTask(index: number) {
+    const newTasks = [...toDoTasks];
+    newTasks[index].isDone = newTasks[index].isDone ? false : true;
+    setToDoTasks(newTasks);
+  }
+
   function displayTasks() {
     return toDoTasks.map((task, index) => (
       <div key={index} className={styles.task}>
-        <input type="checkbox" checked={task.isDone}/>
+        <div
+          className={task.isDone ? styles.taskCheckboxChecked : styles.taskCheckbox }
+          onClick={(e) => handleCompletedTask(index)}
+        >
+          {
+            task.isDone ? (
+              <Check size={18} />
+            ) : (
+              <input type="checkbox" checked={task.isDone}/>
+            )
+          }
+        </div>
         <span>{task.content}</span>
         <Trash
           size={16}
